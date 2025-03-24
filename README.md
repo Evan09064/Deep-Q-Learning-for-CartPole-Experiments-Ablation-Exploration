@@ -1,64 +1,54 @@
+# Deep Q-Learning for CartPole
 
-# Deep Q-Learning README
+This repository contains a comprehensive PyTorch implementation of Deep Q-Learning for the CartPole environment. It includes several DQN variants (standard, Double DQN, Dueling DQN, and Conv Dueling DQN), along with extensive experiments on hyperparameter tuning, ablation studies, and exploration strategies (epsilon-greedy, annealing epsilon-greedy, and softmax).
 
-### Requirements
+## Features
 
-## Python 3.8 is required
+- **DQN Variants:** Standard DQN, Double DQN, Dueling DQN, and Convolutional Dueling DQN.
+- **Ablation Study:** Evaluate the impact of experience replay and target networks.
+- **Exploration Strategies:** Compare epsilon-greedy, annealing epsilon-greedy, and softmax policies.
+- **Hyperparameter Tuning:** Automated grid search for optimal training parameters.
 
-# Create a virtual environment 
+## Requirements
 
-```
- python3 -m venv rl_env
+- Python 3.8
+- PyTorch
+- Gym (CartPole-v1)
+- Other dependencies as listed in `requirements.txt`
 
-```
+## Setup
 
-# Activate the environment
+1. **Clone the repository:**
 
-```
- rl_env\Scripts\activate
+2. **Create and activate a virtual environment:**
 
-```
-
-# Use the requirements file to add the needed libraries
-
-```
- pip install -r requirements.txt
-
-```
-
-### DQN Implementation
-
-The DQN agent was implemented in file *DQN.py*.
-
-If you want to create a standard DQN agent you can run this file by command line in the following ways:
-
-- *python3 DQN.py* if you want to use both experience replay and target network
-- *python3 DQN.py --experience_replay* to run the algorithm without experience replay
-- *python3 DQN.py --target_network* to run the algorithm without target network
-- *python3 DQN.py --target_network --experience_replay*  or *python3 DQN.py --experience_replay --target_network* to run the algorithm without both target network and experience replay
+3. **Install the required packages:**
 
 
-Alternatively, you could also create a double DQN agent or dueling DQN agent (with or without convolutions) in the following way:
-- *python3 DQN.py double*
-- *python3 DQN.py dueling*
-- *python3 DQN.py conv_dueling*
-With these two models, both experience replay and target networks are used.
+## Usage
+
+- **Run DQN agent with both Experience Replay and Target Network:**
+
+- **Run variants (e.g., without Experience Replay or Target Network):**
+
+- **Run DQN improvements:**
+
+- **Hyperparameter Tuning:**
+
+- **Ablation Study:**
+
+- **Exploration Strategies:**
 
 
-### Hyperparameter tuning
-File *hyperparameter_tuning.py* performs the hyperparameter tuning part. By running this file you will obtain the best hyperparameters.
+## Experiment Overview
 
-### Ablation study
-File *ablation_study.py* performs the ablation study, where DQN is implemented with and/or without experience replay/target network. By running this file you will obtain the plot for the ablation study
+The project evaluates different DQN configurations through:
+- **Ablation Studies:** Assessing the roles of experience replay and target networks.
+- **Exploration Strategy Comparison:** Analyzing learning curves using various exploration policies.
+- **Model Enhancements:** Comparing standard DQN with improved variants such as Double and Dueling DQN.
 
-### Explorayion stragies
-In file *exploration_strategies.py* we have compared the perfromance of the DQN by emplying three different explorayion strategies: e-greedy, annealing e-greedy and softmax. By runnign the file you will obtain the plot showint the learning curves of these policies. 
+## License
 
-### DQN improvements
-File *DQN_improvements.py* performs the comarison between DQN, double DQN, dueling DQN and dueling DQN with convolutions. Runnign this file will give you the plot where the different models are compared.
-
-
-
-
+[MIT License]
 
 
